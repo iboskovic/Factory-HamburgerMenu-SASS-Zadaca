@@ -1,0 +1,104 @@
+/* Navigation menu */
+.sidebar 
+    position: fixed
+    width: 250px
+    height: 100%
+    right: 0
+    background: rgba(56, 59, 55, 0.95)
+    animation: slideIn .7s ease-in-out
+
+    .sidebar-list 
+        margin-top: 120px
+
+    ul 
+        width: 100%
+        list-style: none
+
+        li 
+
+            a
+
+                span
+                    position: absolute
+                    top: 50%
+                    right: 20px
+                    transform: translateY(-50%)
+                    font-size: 15px
+                    transition: transform .4s
+
+            &:hover 
+
+                span
+                    transform: translateY(-50%) rotate(-180deg)
+
+        > li 
+            line-height: 40px
+            border-bottom: 1px solid #1E201D
+            margin: 0px 10px
+            
+            a 
+                position: relative
+                color: #fff
+                text-decoration: none
+                font-family: Arial, Helvetica, sans-serif
+                font-weight: bold
+                font-size: 16px
+                display: block
+                width: 100%
+                padding: 0 20px
+
+                &:hover 
+                    background: #1E201D
+                    border-left: 2px solid #85B2FF
+                    transition: all .2s ease-in-out
+
+        ul 
+            position: static
+            display: none
+            width: 250px
+            margin-left: -10px
+
+            li
+                background: rgba(30, 32, 29, 0.4)
+
+                a
+                    color: #D3CBCF
+                    font-family: Arial, Helvetica, sans-serif
+                    font-size: 16px
+                    font-weight: normal
+                    padding: 0 30px
+
+        li:hover 
+
+            ul 
+                position: static
+                display: block
+
+
+
+/* Animation */
+@keyframes slideIn 
+    0% 
+        transform: translateX(250px)
+    
+
+
+/* Show/Hide Sidebar */
+.menu-wrap 
+
+    .sidebar 
+        display: none
+    
+
+
+.menu-wrap 
+
+    .toggle:checked 
+
+        ~ .sidebar 
+            display: block
+    
+
+
+i 
+    float: right
